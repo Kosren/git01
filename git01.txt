@@ -15,6 +15,7 @@
 14、再加一行 第四次提交
 15、尝试不暂存直接提交      可以执行
 16、看git reset HEAD 文件名的执行效果，先提交再执行该指令，看是否撤销提交记录     无效
+
 二、git文件修改&版本切换删除
 参考一
 git diff HEAD -- 文件名   问价差异性对比
@@ -26,6 +27,20 @@ git reset --hard 版本HASH值（5~8个字符）回退（前后均可，根据版本HASH值决定）
 git reflog  如果查不到版本HASH值了，用这个找
 git checkout --文件名   检出git 本地库文件到工作区（下载）
 git rm 文件名  删除git 版本库对应文件
+
 三、远程githup拉项目
 先执行 git config --system http.sslverify false
 再git clone  项目连接
+
+四、传到远程
+新建githup用户
+githup上新建仓库（仓库名称不能是中文）
+本地执行 ssh-keygen -t rsa -C "邮箱"，提示在文件夹下生成公钥和私钥执行，把公钥再githup个人网页上，
+校验SSH环境：ssh -T git@github.com
+执行远程推送：进入仓库，找到SSH对应的命令本地执行
+绑定远程仓库地址：git remote add origin git@github.com:Kosren/git01.git
+本地创建分支：git branch -M main
+本地文件推送收到远程：git push -u origin main
+刷新远程仓库
+
+
