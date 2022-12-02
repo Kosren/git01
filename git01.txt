@@ -1,2 +1,8 @@
 01仓库
 初始化和文件提交
+get status 查看暂存区的状态
+git init 初始化本地仓库
+git add 添加暂存区（文件或文件夹）
+git commit 提交暂存区的（文件或文件夹） -m "解释说明"
+get ls-files查看仓库的文件列表
+第二次提交
