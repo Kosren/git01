@@ -114,4 +114,23 @@ git push origin : remote_branch _name
 推送本地标签到远程    git push origion tag_name                  
 删除远程标签    git push origin :refs/tags/tag_name 
 删除本地标签   git tag -d tag_name 
-推送本地所有标签   git push origin --tags 
+推送本地所有标签   git push origin --tags
+
+十一、idea的
+
+1、环境配置
+git.exe路径指令，github的账号配置
+2、clone远程项目到本地
+
+3、本地项目推送远程
+本地版本库初始化，本地项目的远程推送
+
+4、分支基本操作
+本地的推送到远程，远程的拉到本地，分支的增删改查
+
+5、忽略插件
+ignore插件安装，创建、配置
+
+6、文件操作冲突
+本地同提交一个相同名字的文件，并修改了相同行
+本地和其他节点先后提交同一个文件，且被修改，后提交的会报错，解决方法是先拉，再提交
