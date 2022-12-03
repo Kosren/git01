@@ -1,46 +1,46 @@
-һ���ֿ��ʼ�����ļ��ύ
-1��01�ֿ�
-2����ʼ�����ļ��ύ
-3��get status �鿴�ݴ�����״̬
-4��git init ��ʼ�����زֿ�
-5��git add �����ݴ������ļ����ļ��У�
-6��git commit �ύ�ݴ����ģ��ļ����ļ��У� -m "����˵��"
-7��get ls-files�鿴�ֿ���ļ��б�
-8���ڶ����ύ
-9���������ύ
-10������ʱ�⴩���-6,4 +6,6 ����Σ���������һ��  -7,8 +7,8
-11���ֶ�һ��-6,4 +6,6   �����α仯��
-12���ٶ�һ��-6,4 +6,7  �ύ
-13�����¼�һ�� -10,3 +10,4 
-14���ټ�һ�� ���Ĵ��ύ
-15�����Բ��ݴ�ֱ���ύ      ����ִ��
-16����git reset HEAD �ļ�����ִ��Ч�������ύ��ִ�и�ָ����Ƿ����ύ��¼     ��Ч
+一、仓库初始化与文件提交
+1、01仓库
+2、初始化和文件提交
+3、get status 查看暂存区的状态
+4、git init 初始化本地仓库
+5、git add 添加暂存区（文件或文件夹）
+6、git commit 提交暂存区的（文件或文件夹） -m "解释说明"
+7、get ls-files查看仓库的文件列表
+8、第二次提交
+9、第三次提交
+10、开启时光穿梭机-6,4 +6,6 第五次，在这添加一句  -7,8 +7,8
+11、又多一行-6,4 +6,6   第六次变化，
+12、再多一行-6,4 +6,7  提交
+13、重新加一行 -10,3 +10,4 
+14、再加一行 第四次提交
+15、尝试不暂存直接提交      可以执行
+16、看git reset HEAD 文件名的执行效果，先提交再执行该指令，看是否撤销提交记录     无效
 
-����git�ļ��޸�&�汾�л�ɾ��
-�ο�һ
-git diff HEAD -- �ļ���   �ʼ۲����ԶԱ�
-git log �鰸git�ύ��־
-git log --pretty=oneline �򻯲鿴igt�ύ��־��HEADָ��ָ��˵�� �ύ��־HASHֵ��
-git reset --hard HEAD^��������һ�汾��һ��^������һ���汾��
-git reset --hard HEAD~���� �����ļ���ָ���汾���������־�����
-git reset --hard �汾HASHֵ��5~8���ַ������ˣ�ǰ����ɣ����ݰ汾HASHֵ������
-git reflog  ����鲻���汾HASHֵ�ˣ��������
-git checkout --�ļ���   ���git ���ؿ��ļ��������������أ�
-git rm �ļ���  ɾ��git �汾���Ӧ�ļ�
+二、git文件修改&版本切换删除
+参考一
+git diff HEAD -- 文件名   问价差异性对比
+git log 查案git提交日志
+git log --pretty=oneline 简化查看igt提交日志（HEAD指针指向说明 提交日志HASH值）
+git reset --hard HEAD^（回退上一版本，一个^就是以一个版本）
+git reset --hard HEAD~数字 回退文件到指定版本（根据数字决定）
+git reset --hard 版本HASH值（5~8个字符）回退（前后均可，根据版本HASH值决定）
+git reflog  如果查不到版本HASH值了，用这个找
+git checkout --文件名   检出git 本地库文件到工作区（下载）
+git rm 文件名  删除git 版本库对应文件
 
-����Զ��githup����Ŀ
-��ִ�� git config --system http.sslverify false
-��git clone  ��Ŀ����
+三、远程githup拉项目
+先执行 git config --system http.sslverify false
+再git clone  项目连接
 
-�ġ�����Զ��
-�½�githup�û�
-githup���½��ֿ⣨�ֿ����Ʋ��������ģ�
-����ִ�� ssh-keygen -t rsa -C "����"����ʾ���ļ��������ɹ�Կ��˽Կִ�У��ѹ�Կ��githup������ҳ�ϣ�
-У��SSH������ssh -T git@github.com
-ִ��Զ�����ͣ�����ֿ⣬�ҵ�SSH��Ӧ�������ִ��
-��Զ�ֿ̲��ַ��git remote add origin git@github.com:Kosren/git01.git
-���ش�����֧��git branch -M main
-�����ļ������յ�Զ�̣�git push -u origin main
-ˢ��Զ�ֿ̲�
-
+四、传到远程
+新建githup用户
+githup上新建仓库（仓库名称不能是中文）
+本地执行 ssh-keygen -t rsa -C "邮箱"，提示在文件夹下生成公钥和私钥执行，把公钥再githup个人网页上，
+校验SSH环境：ssh -T git@github.com
+执行远程推送：进入仓库，找到SSH对应的命令本地执行
+绑定远程仓库地址：git remote add origin git@github.com:Kosren/git01.git
+本地创建分支：git branch -M main
+本地文件推送收到远程：git push -u origin main
+刷新远程仓库
++++
 
